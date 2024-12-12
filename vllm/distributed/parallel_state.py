@@ -927,6 +927,11 @@ def get_tp_group() -> GroupCoordinator:
     return _TP
 
 
+def set_tp_group(new_group: GroupCoordinator):
+    global _TP
+    _TP = new_group
+
+
 # kept for backward compatibility
 get_tensor_model_parallel_group = get_tp_group
 
